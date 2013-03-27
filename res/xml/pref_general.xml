@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+ 	<com.andrusiak.stayokey.TimePreference
+	    android:key="pref_time" 
+	    android:title="@string/pref_time"
+	    android:defaultValue="@string/pref_default_time"
+	    android:summary="@string/pref_default_time" />
+ 	
+	<CheckBoxPreference
+        android:key="pref_vibrate"
+        android:defaultValue="false"
+        android:title="@string/pref_vibrate"/>
+	<RingtonePreference
+	    android:key="pref_ringtone"
+	    android:ringtoneType="notification"
+	    android:title="@string/pref_ringtone"/>
+	    
+</PreferenceScreen>
