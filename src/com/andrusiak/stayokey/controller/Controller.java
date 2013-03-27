@@ -1,9 +1,14 @@
-package com.andrusiak.stayokey;
+package com.andrusiak.stayokey.controller;
 
 import java.util.Calendar;
 import java.util.Date;
 
+import com.andrusiak.stayokey.R;
+import com.andrusiak.stayokey.R.drawable;
+import com.andrusiak.stayokey.R.string;
 import com.andrusiak.stayokey.activity.QuestionActivity;
+import com.andrusiak.stayokey.notification.QuestionNotification;
+import com.andrusiak.stayokey.preference.PreferenceManager;
 
 import android.app.AlarmManager;
 import android.app.Notification;
@@ -44,7 +49,7 @@ public class Controller {
 		setEveryDayNotification();
 	}
 	
-	Notification buildNotification(){
+	public Notification buildNotification(){
 		PreferenceManager pm = PreferenceManager.getInstance(mContext);
 		NotificationCompat.Builder mBuilder =
 		        new NotificationCompat.Builder(mContext)

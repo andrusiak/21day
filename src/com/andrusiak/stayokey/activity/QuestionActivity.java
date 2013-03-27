@@ -13,9 +13,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.andrusiak.stayokey.Controller;
-import com.andrusiak.stayokey.PreferenceManager;
 import com.andrusiak.stayokey.R;
+import com.andrusiak.stayokey.controller.Controller;
+import com.andrusiak.stayokey.preference.PreferenceManager;
 
 public class QuestionActivity extends Activity {
 

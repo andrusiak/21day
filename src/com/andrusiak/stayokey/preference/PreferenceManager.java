@@ -1,4 +1,4 @@
-package com.andrusiak.stayokey;
+package com.andrusiak.stayokey.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;

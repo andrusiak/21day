@@ -1,4 +1,6 @@
-package com.andrusiak.stayokey;
+package com.andrusiak.stayokey.notification;
+
+import com.andrusiak.stayokey.controller.Controller;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;

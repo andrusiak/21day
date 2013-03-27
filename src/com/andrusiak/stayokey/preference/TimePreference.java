@@ -1,4 +1,7 @@
-package com.andrusiak.stayokey;
+package com.andrusiak.stayokey.preference;
+
+import com.andrusiak.stayokey.R;
+import com.andrusiak.stayokey.R.string;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -47,6 +50,7 @@ public class TimePreference extends DialogPreference {
         if(DateFormat.is24HourFormat(getContext())){
         	picker.setIs24HourView(true);
         }
+//        onSetInitialValue(true, "23:00");
         return(picker);
     }
 

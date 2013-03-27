@@ -18,7 +18,7 @@ import android.preference.RingtonePreference;
 import android.text.TextUtils;
 
 import com.andrusiak.stayokey.R;
-import com.andrusiak.stayokey.TimePreference;
+import com.andrusiak.stayokey.preference.TimePreference;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -114,7 +114,7 @@ public class SettingsActivity extends PreferenceActivity {
 				TimePreference timePreference = (TimePreference)preference;
 				timePreference.setSummary(stringValue);
 				
-				com.andrusiak.stayokey.PreferenceManager.
+				com.andrusiak.stayokey.preference.PreferenceManager.
 				getInstance(preference.getContext()).
 				setNotificationTime(stringValue);
 				

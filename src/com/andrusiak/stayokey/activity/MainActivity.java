@@ -12,8 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.andrusiak.stayokey.Controller;
 import com.andrusiak.stayokey.R;
+import com.andrusiak.stayokey.controller.Controller;
 
 public class MainActivity extends Activity {
 
