@@ -1,4 +1,5 @@
-21day
+21 Day
 =====
 
-An app to help people to stop complaining based on Will Bowen methodic. 
+An app to help people to stop complaining in 21 day.
+Based on Will Bowen methodic. 
