@@ -1,6 +1,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
- 	<com.andrusiak.stayokey.TimePreference
+ 	<com.andrusiak.stayokey.preference.TimePreference
 	    android:key="pref_time" 
 	    android:title="@string/pref_time"
 	    android:defaultValue="@string/pref_default_time"
