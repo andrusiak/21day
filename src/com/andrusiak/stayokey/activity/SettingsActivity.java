@@ -18,6 +18,7 @@ import android.preference.RingtonePreference;
 import android.text.TextUtils;
 
 import com.andrusiak.stayokey.R;
+import com.andrusiak.stayokey.Utils;
 import com.andrusiak.stayokey.preference.TimePreference;
 
 /**
@@ -111,6 +112,9 @@ public class SettingsActivity extends PreferenceActivity {
 			String stringValue = value.toString();
 
 			if (preference instanceof TimePreference){
+				if(stringValue.equals("")||stringValue == null){
+					stringValue = Utils.DEFAULT_TIME;
+				}
 				TimePreference timePreference = (TimePreference)preference;
 				timePreference.setSummary(stringValue);
 				
@@ -173,6 +177,11 @@ public class SettingsActivity extends PreferenceActivity {
 				preference,
 				PreferenceManager.getDefaultSharedPreferences(preference.getContext())
 				.getBoolean(preference.getKey(), false));
+		} else if(preference instanceof CheckBoxPreference){
+			sBindPreferenceSummaryToValueListener.onPreferenceChange(
+					preference,
+					PreferenceManager.getDefaultSharedPreferences(preference.getContext())
+					.getString(preference.getKey(), Utils.DEFAULT_TIME));
 		} else {
 		sBindPreferenceSummaryToValueListener.onPreferenceChange(
 				preference,

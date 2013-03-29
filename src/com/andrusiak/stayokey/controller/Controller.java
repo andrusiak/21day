@@ -139,5 +139,8 @@ public class Controller {
 			prefs.setDayCount(++day);
 		}
 	}
+	public boolean isChallengeStarted(){
+		return prefs.getDayCount()>0;
+	}
 
 }

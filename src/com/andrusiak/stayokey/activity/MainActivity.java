@@ -22,6 +22,13 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		if(Controller.getInstance(getApplicationContext()).isChallengeStarted()){
+			Intent intent = new Intent(getApplicationContext(),QuestionActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(intent);
+			this.finish();
+		}
 		setContentView(R.layout.activity_main);
 		
 		//get status of a previous game - it is failed if you angry these days

@@ -1,5 +1,7 @@
 package com.andrusiak.stayokey.preference;
 
+import com.andrusiak.stayokey.Utils;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -44,13 +46,20 @@ public class PreferenceManager{
 	}
 
 	public void setNotificationTime(String time){
+		
 		sp.edit()
 		.putString(PREF_TIME, time)
 		.commit();
 	}
 	
 	public String getNotificationTime(){
-		return sp.getString(PREF_TIME, "23:00");
+		String time = sp.getString(PREF_TIME, "23:00");
+		
+		//prevent returning empty time
+		if(time.equals("")){
+			return Utils.DEFAULT_TIME;
+		}
+		return time;
 	}
 	
 	public void clearAll() {
