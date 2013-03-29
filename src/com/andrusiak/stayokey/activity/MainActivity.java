@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.andrusiak.stayokey.R;
 import com.andrusiak.stayokey.controller.Controller;
+import com.andrusiak.stayokey.preference.PreferenceManager;
 
 public class MainActivity extends Activity {
 
@@ -23,7 +24,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if(Controller.getInstance(getApplicationContext()).isChallengeStarted()){
-			Intent intent = new Intent(getApplicationContext(),QuestionActivity.class);
+			Intent intent = new Intent(getApplicationContext(), QuestionActivity.class);
 			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			startActivity(intent);
@@ -54,7 +55,9 @@ public class MainActivity extends Activity {
 				
 				//create singletone controller to start a functionality
 				Controller.getInstance(getApplicationContext()).startChallenge();
-				Toast.makeText(getApplicationContext(), "Игра началась", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), 
+						String.format(MainActivity.this.getString(R.string.challenge_start), PreferenceManager.getInstance(MainActivity.this).getNotificationTime()), 
+						Toast.LENGTH_SHORT).show();
 				
 				MainActivity.this.finish();
 			}});
